@@ -1,0 +1,17 @@
+name: "Modular Todo App CI/CD Pipeline"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci-pipeline:
+    uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/dotnet-ci.yml@main
+    with:
+      dotnet-version: '7.0'
+      language: 'dotnet'
+      project-path: './modular-todo-app/modular-todo-app.csproj'
