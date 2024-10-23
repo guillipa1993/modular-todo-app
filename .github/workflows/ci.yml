@@ -20,7 +20,8 @@ jobs:
       run-tests: true
       run-check-code-format: true
       run-code-analysis: true
-      environment-variables: |
-        ASPNETCORE_ENVIRONMENT: ''
-        CONNECTION_STRING: ''
-        
+      run-build-artifact: true
+      run-upload-coverage: true
+      run-yaml-lint: true
+      run-clean-up: true
+      environment-variables: ''
