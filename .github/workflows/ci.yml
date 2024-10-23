@@ -12,6 +12,14 @@ jobs:
   ci-pipeline:
     uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/dotnet-ci.yml@main
     with:
-      dotnet-version: '7.0'
+      dotnet-version: '2.2'
       language: 'dotnet'
-      project-path: './modular-todo-app/modular-todo-app.csproj'
+      project-path: ''
+      build-configuration: ''
+      additional-install-commands: ''
+      run-tests: true
+      run-check-code-format: true
+      run-code-analysis: true
+      environment-variables:
+        ASPNETCORE_ENVIRONMENT: ''
+        CONNECTION_STRING: ''
