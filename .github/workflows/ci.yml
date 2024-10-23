@@ -22,6 +22,6 @@ jobs:
       run-code-analysis: true
       run-build-artifact: true
       run-upload-coverage: true
-      run-yaml-lint: true
+      run-lint: true
       run-clean-up: true
       environment-variables: ''
