@@ -20,6 +20,7 @@ jobs:
       run-tests: true
       run-check-code-format: true
       run-code-analysis: true
-      environment-variables:
+      environment-variables: |
         ASPNETCORE_ENVIRONMENT: ''
         CONNECTION_STRING: ''
+        
