@@ -18,7 +18,6 @@ jobs:
       project-path: './src'
       build-configuration: 'Release'
       additional-install-commands: ''
-      build-command: 'dotnet build ./src -c Release'
       run-check-code-format: true
       run-code-analysis: true
       run-lint: true
