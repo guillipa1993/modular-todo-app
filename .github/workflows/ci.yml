@@ -1,27 +1,30 @@
-name: "Modular Todo App CI/CD Pipeline"
+name: "CI/CD Pipeline for Go"
 
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   ci-pipeline:
-    uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/dotnet-ci.yml@main
+    uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/go-ci.yml@main
     with:
-      dotnet-version: '2.2'
-      language: 'dotnet'
-      project-path: ''
-      build-configuration: ''
+      language: 'go'
+      python-version: '1.20'
+      report-language: 'English'
+      project-path: './src'
+      requirements-path: './requirements'
+      build-configuration: 'Release'
       additional-install-commands: ''
-      run-tests: true
+      build-command: 'go build -o output/app ./...'
       run-check-code-format: true
       run-code-analysis: true
-      run-build-artifact: true
-      run-upload-coverage: true
       run-lint: true
-      run-clean-up: true
-      environment-variables: ''
+      environment-variables: 'GOENV=production'
+    secrets:
+      AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
+      AZURE_STORAGE_ACCOUNT_KEY: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
