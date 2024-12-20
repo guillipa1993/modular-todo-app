@@ -16,7 +16,6 @@ jobs:
       dotnet-version: '7.0'
       report-language: 'English'
       project-path: './src'
-      requirements-path: ''
       build-configuration: 'Release'
       additional-install-commands: ''
       build-command: 'dotnet build ./src -c Release'
