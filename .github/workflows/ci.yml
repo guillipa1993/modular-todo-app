@@ -15,12 +15,13 @@ jobs:
       language: 'dotnet'
       dotnet-version: '7.0'
       report-language: 'English'
-      project-path: './src'
+      project-path: './src/ModularTodoApp.Web.Mvc/ModularTodoApp.Web.Mvc.csproj'
       build-configuration: 'Release'
       additional-install-commands: ''
       run-check-code-format: true
       run-code-analysis: true
       run-lint: true
+      build-command: ''
       environment-variables: 'DOTNET_ENV=Production'
     secrets:
       AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
